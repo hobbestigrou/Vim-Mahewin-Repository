@@ -1,13 +1,12 @@
 """"""""""""""""""""""""""""""""""""""""""
-"Fichier de configuration pour vim
-"Auteur: Natal Ngétal alias Hobbestigrou
-"Site: http://erakis.im
-"Version 0.1
+" File configuration of vim
+"Author: Natal Ngétal alias Hobbestigrou
+"Website: http://erakis.im
+"Version: 0.1
 """"""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""
-"Activation de la coloration syntaxique
-"et de l'indetation
+" Active color syntax and indent
 """"""""""""""""""""""""""""""""""""""""""
 
 set nocompatible
@@ -21,14 +20,14 @@ set autoindent
 set smartindent
 
 """"""""""""""""""""""""""""""""""""""""""
-"Activation de la numérotation de lignes
+" Active number of line
 """"""""""""""""""""""""""""""""""""""""""
 
 set number
 set numberwidth=3
 
 """"""""""""""""""""""""""""""""""""""""""
-"Activation de la barre de status
+" Active statusbar
 """"""""""""""""""""""""""""""""""""""""""
 
 set laststatus=2
@@ -36,14 +35,13 @@ set statusline=%t%m%r%h%w\ %{fugitive#statusline()}\ [FORMAT=%{&ff}]\ [TYPE=%Y]\
 
 
 """""""""""""""""""""""""""""""""""""""""""
-"Afficher les délimeteurs de bloc
-"correspondant
+"Show block delimits
 """""""""""""""""""""""""""""""""""""""""""
 
 set showmatch
 
 """""""""""""""""""""""""""""""""""""""""""
-"Différentes options pour la recherche
+"Search options
 """""""""""""""""""""""""""""""""""""""""""
 
 set incsearch
@@ -58,30 +56,29 @@ set smartcase
 set wildmenu
 
 """""""""""""""""""""""""""""""""""""""""""
-"Activer une confirmation lorsque l'on
-"quitte sans avoir enregistrer le fichier
+" Active confim when we quit without save
 """""""""""""""""""""""""""""""""""""""""""
 set confirm
 
 """""""""""""""""""""""""""""""""""""""""""
-"Afficher la contenant le curseur
+"Show cursor
 """""""""""""""""""""""""""""""""""""""""""
 
 set cursorline
 
 """""""""""""""""""""""""""""""""""""""""""
-"Activation de la souris en mode shell
+" Active support mouse in shell
 """""""""""""""""""""""""""""""""""""""""""
 set mouse=a
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"Mapping pour insérer la date du jour
+"Mapping to insert date
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
 imap \date  <C-R>=strftime("%d/%m/%Y")<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"Correction orthographique
+"Active spelling in french
 """"""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufEnter *.txt set spell
 autocmd BufEnter *.txt set spelllang=fr
@@ -103,13 +100,15 @@ map pd :!perl -d %<CR>
 set omnifunc=syntaxcomplete#Complete
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"Détecter les espaces en fin de ligne
+"Detect tabulation and tabs in end of line
 """"""""""""""""""""""""""""""""""""""""""""""""""
 set list
 set lcs:tab:>-,trail:X
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Détecter le type de fichier
+"Detect filetype
 """"""""""""""""""""""""""""""""""""""""""""""""""
 filetype on
 filetype plugin on
+
+
