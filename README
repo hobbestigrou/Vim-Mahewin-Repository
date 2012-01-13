@@ -1,0 +1,11 @@
+VimRepository
+
+A vim setup with cool plugin and colorscheme. Feel free to use and contrib. Inspired by oh-my-zsh.
+
+Included plugins:
+* Ack.vim
+* fugitive.vim
+* commandt.vim
+
+Ack.vim:
+:Ack followed by text you wish ack for. It's fairly obvious to navigate the results. Note that you will need ack installed.
