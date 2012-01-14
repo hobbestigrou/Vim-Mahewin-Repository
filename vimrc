@@ -35,7 +35,7 @@ set statusline=%t%m%r%h%w\ %{fugitive#statusline()}\ [FORMAT=%{&ff}]\ [TYPE=%Y]\
 
 
 """""""""""""""""""""""""""""""""""""""""""
-"Show block delimits
+"Show matching brackets
 """""""""""""""""""""""""""""""""""""""""""
 
 set showmatch
@@ -114,4 +114,7 @@ set lcs:tab:>-,trail:X
 filetype on
 filetype plugin on
 
-
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"Can use backspace in all case
+""""""""""""""""""""""""""""""""""""""""""""""""""
+set backspace=2
