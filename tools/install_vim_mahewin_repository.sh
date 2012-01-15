@@ -13,6 +13,15 @@ function _check_user {
 
 }
 
+function _build_command_t {
+    cd $HOME/.vim/ruby/command-t
+    ruby extconf.rb
+    echo "Build command-t plugin"
+    make clean
+    make
+    cd $HOME/Conf
+}
+
 _check_user
 
 echo "Thanks to use Vim-Mahewin-Repository"
@@ -25,3 +34,4 @@ rm -rf $HOME/.vim
 echo "Install vim directory from vim-mahewin-repository in your home"
 cp -r $path_vim_mahewin_repository/vim $HOME/.vim
 
+_build_command_t
