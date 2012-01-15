@@ -19,7 +19,7 @@ function _build_command_t {
     echo "Build command-t plugin"
     make clean
     make
-    cd $HOME/Conf
+    cd $HOME
 }
 
 function _install {
