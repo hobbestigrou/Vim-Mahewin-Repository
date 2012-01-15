@@ -22,16 +22,19 @@ function _build_command_t {
     cd $HOME/Conf
 }
 
+function _install {
+    echo "Thanks to use Vim-Mahewin-Repository"
+
+    echo "Install vimrc from vim-mahewin-repository in your home"
+    cp $path_vim_mahewin_repository/vimrc $HOME/.vimrc
+
+    echo "Delete actually vim directory"
+    rm -rf $HOME/.vim
+    echo "Install vim directory from vim-mahewin-repository in your home"
+    cp -r $path_vim_mahewin_repository/vim $HOME/.vim
+
+    _build_command_t
+}
+
 _check_user
-
-echo "Thanks to use Vim-Mahewin-Repository"
-
-echo "Install vimrc from vim-mahewin-repository in your home"
-cp $path_vim_mahewin_repository/vimrc $HOME/.vimrc
-
-echo "Delete actually vim directory"
-rm -rf $HOME/.vim
-echo "Install vim directory from vim-mahewin-repository in your home"
-cp -r $path_vim_mahewin_repository/vim $HOME/.vim
-
-_build_command_t
+_install
