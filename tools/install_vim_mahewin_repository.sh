@@ -7,20 +7,21 @@ function _check_user {
 
     if [ "$UID" -eq "$ROOT_UID" ]
     then
-        echo "You must not be root"
+        echo "You don't must be root to execute this script"
         exit 0
     fi
+
 }
 
 _check_user
 
 echo "Thanks to use Vim-Mahewin-Repository"
 
-echo "Install vimrc"
+echo "Install vimrc from vim-mahewin-repository in your home"
 cp $path_vim_mahewin_repository/vimrc $HOME/.vimrc
 
 echo "Delete actually vim directory"
 rm -rf $HOME/.vim
-echo "Install vim directory from vim-mahewin-repository"
+echo "Install vim directory from vim-mahewin-repository in your home"
 cp -r $path_vim_mahewin_repository/vim $HOME/.vim
 
