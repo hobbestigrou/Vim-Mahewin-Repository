@@ -96,6 +96,7 @@ au BufReadPost .vimrc map K :exe ":help ".expand("<cword>")<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 map ps :!perl -c %<CR>
 map pd :!perl -d %<CR>
+map px :!perl %<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Autocompletion
