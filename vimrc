@@ -5,10 +5,35 @@
 "Version: 0.1
 """"""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"Detect filetype
+""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype off
+filetype plugin indent on
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set bundle config
+""""""""""""""""""""""""""""""""""""""""""""""""""
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"Load Vim plugin from github
+""""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'hobbestigrou/vimtips-fortune'
+Bundle 'hobbestigrou/Mahewincs'
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/syntastic'
+Bundle 'godlygeek/tabular'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'vim-scripts/Perl-MooseX.Declare-Syntax'
+
 """"""""""""""""""""""""""""""""""""""""""
 " Active color syntax and indent
 """"""""""""""""""""""""""""""""""""""""""
-
 set nocompatible
 syntax on
 colorscheme Mahewincs "Thème pour la coloration syntaxique
@@ -22,14 +47,12 @@ set smartindent
 """"""""""""""""""""""""""""""""""""""""""
 " Active number of line
 """"""""""""""""""""""""""""""""""""""""""
-
 set number
 set numberwidth=3
 
 """"""""""""""""""""""""""""""""""""""""""
 " Active statusbar
 """"""""""""""""""""""""""""""""""""""""""
-
 set laststatus=2
 set statusline=%t%m%r%h%w\ %{fugitive#statusline()}\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [FENC=%{&fileencoding}]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]\
 
