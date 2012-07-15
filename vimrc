@@ -31,6 +31,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/Perl-MooseX.Declare-Syntax'
 Bundle 'vim-scripts/ZoomWin'
+Bundle 'hotchpotch/perldoc-vim'
 
 """"""""""""""""""""""""""""""""""""""""""
 " Active color syntax and indent
