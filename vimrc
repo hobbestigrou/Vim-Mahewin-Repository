@@ -51,6 +51,7 @@ set smartindent
 """"""""""""""""""""""""""""""""""""""""""
 set colorcolumn=80
 highlight ColorColumn ctermbg=7
+
 """"""""""""""""""""""""""""""""""""""""""
 " Active number of line
 """"""""""""""""""""""""""""""""""""""""""
@@ -63,17 +64,14 @@ set numberwidth=3
 set laststatus=2
 set statusline=%t%m%r%h%w\ %{fugitive#statusline()}\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [FENC=%{&fileencoding}]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]\
 
-
 """""""""""""""""""""""""""""""""""""""""""
 "Show matching brackets
 """""""""""""""""""""""""""""""""""""""""""
-
 set showmatch
 
 """""""""""""""""""""""""""""""""""""""""""
 "Search options
 """""""""""""""""""""""""""""""""""""""""""
-
 set incsearch
 set hlsearch
 set ignorecase
@@ -82,7 +80,6 @@ set smartcase
 """""""""""""""""""""""""""""""""""""""""""
 "Menu completion
 """""""""""""""""""""""""""""""""""""""""""
-
 set wildmenu
 
 """""""""""""""""""""""""""""""""""""""""""
@@ -93,7 +90,6 @@ set confirm
 """""""""""""""""""""""""""""""""""""""""""
 "Show cursor
 """""""""""""""""""""""""""""""""""""""""""
-
 set cursorline
 
 """""""""""""""""""""""""""""""""""""""""""
@@ -104,7 +100,6 @@ set mouse=a
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Mapping to insert date
 """"""""""""""""""""""""""""""""""""""""""""""""""
-
 imap \date  <C-R>=strftime("%d/%m/%Y")<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
