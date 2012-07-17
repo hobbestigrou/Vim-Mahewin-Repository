@@ -32,6 +32,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/Perl-MooseX.Declare-Syntax'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'hotchpotch/perldoc-vim'
+Bunlde 'majutsushi/tagbar'
 
 """"""""""""""""""""""""""""""""""""""""""
 " Active color syntax and indent
