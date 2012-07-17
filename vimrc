@@ -47,6 +47,11 @@ set autoindent
 set smartindent
 
 """"""""""""""""""""""""""""""""""""""""""
+" Add column delimit
+""""""""""""""""""""""""""""""""""""""""""
+set colorcolumn=80
+highlight ColorColumn ctermbg=7
+""""""""""""""""""""""""""""""""""""""""""
 " Active number of line
 """"""""""""""""""""""""""""""""""""""""""
 set number
