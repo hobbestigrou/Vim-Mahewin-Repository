@@ -47,7 +47,7 @@ set autoindent
 set smartindent
 
 """"""""""""""""""""""""""""""""""""""""""
-" Add column delimit
+" Add column delimiter
 """"""""""""""""""""""""""""""""""""""""""
 set colorcolumn=80
 highlight ColorColumn ctermbg=7
