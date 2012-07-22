@@ -32,7 +32,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/Perl-MooseX.Declare-Syntax'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'hotchpotch/perldoc-vim'
-Bunlde 'majutsushi/tagbar'
+Bundle 'majutsushi/tagbar'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-markdown'
 
