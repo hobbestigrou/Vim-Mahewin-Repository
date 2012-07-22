@@ -34,6 +34,7 @@ Bundle 'vim-scripts/ZoomWin'
 Bundle 'hotchpotch/perldoc-vim'
 Bunlde 'majutsushi/tagbar'
 Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-markdown'
 
 """"""""""""""""""""""""""""""""""""""""""
 " Active color syntax and indent
