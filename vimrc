@@ -9,7 +9,6 @@
 "Detect filetype
 """"""""""""""""""""""""""""""""""""""""""""""""""
 filetype off
-filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Set bundle config
@@ -35,6 +34,8 @@ Bundle 'hotchpotch/perldoc-vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-markdown'
+
+filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""
 " Active color syntax and indent
