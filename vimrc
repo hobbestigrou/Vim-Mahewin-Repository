@@ -6,6 +6,11 @@
 """"""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Vim improved
+""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 "Detect filetype
 """"""""""""""""""""""""""""""""""""""""""""""""""
 filetype off
@@ -40,7 +45,6 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""
 " Active color syntax and indent
 """"""""""""""""""""""""""""""""""""""""""
-set nocompatible
 syntax on
 colorscheme Mahewincs "Thème pour la coloration syntaxique
 set ai "Pour l'autoindetation
