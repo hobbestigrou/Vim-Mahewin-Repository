@@ -41,6 +41,7 @@ Bundle "honza/snipmate-snippets"
 Bundle 'garbas/vim-snipmate'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
 
@@ -133,6 +134,7 @@ au BufReadPost .vimrc map K :exe ":help ".expand("<cword>")<CR>
 map ps :!perl -c %<CR>
 map pd :!perl -d %<CR>
 map px :!perl %<CR>
+map pi :!perl -Ilib %<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Autocompletion
@@ -183,3 +185,5 @@ let g:syntastic_mode_map = { 'mode': 'active',
 ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
 snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
 let g:miniBufExplMapCTabSwitchWindows = 1
+
+nmap <F8> :TagbarToggle<CR>
