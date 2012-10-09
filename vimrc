@@ -41,6 +41,7 @@ Bundle "honza/snipmate-snippets"
 Bundle 'garbas/vim-snipmate'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'vim-scripts/netrw.vim'
 
 filetype plugin indent on
 
@@ -74,6 +75,7 @@ set numberwidth=3
 """"""""""""""""""""""""""""""""""""""""""
 set laststatus=2
 set statusline=%t%m%r%h%w\ %{fugitive#statusline()}\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [FENC=%{&fileencoding}]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]\
+
 
 """""""""""""""""""""""""""""""""""""""""""
 "Show matching brackets
@@ -123,9 +125,10 @@ autocmd BufEnter *.txt set spelllang=fr
 "Documentation
 """"""""""""""""""""""""""""""""""""""""""""""""""
 runtime ftplugin/man.vim
-au BufReadPost *.pl   set keywordprg=perldoc\ -f
-au BufReadPost *.pm   set keywordprg=perldoc\ -f
+"au BufReadPost *.pl   set keywordprg=perldoc\ -f
+"au BufReadPost *.pm   set keywordprg=perldoc\ -f
 au BufReadPost .vimrc map K :exe ":help ".expand("<cword>")<CR>
+au FileType perl map K :exe ":Perldoc "substitute(expand("<cWORD>"), '\v[;]', '', 'g')<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Mapping Perl
@@ -188,3 +191,5 @@ let g:miniBufExplMapCTabSwitchWindows = 1
 
 nmap <F8> :TagbarToggle<CR>
 nmap <F11> :NERDTree<CR>
+
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
