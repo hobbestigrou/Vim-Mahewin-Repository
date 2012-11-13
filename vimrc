@@ -42,6 +42,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-scripts/netrw.vim'
+Bundle 'fs111/pydoc.vim'
 
 filetype plugin indent on
 
@@ -129,6 +130,7 @@ runtime ftplugin/man.vim
 "au BufReadPost *.pm   set keywordprg=perldoc\ -f
 au BufReadPost .vimrc map K :exe ":help ".expand("<cword>")<CR>
 au FileType perl map K :exe ":Perldoc "substitute(expand("<cWORD>"), '\v[;]', '', 'g')<CR>
+au FileType python map K :exe ":Pydoc ".expand("<cword>")<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Mapping Perl
