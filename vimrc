@@ -43,6 +43,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-scripts/netrw.vim'
 Bundle 'fs111/pydoc.vim'
+Bundle 'airblade/vim-gitgutter'
 
 filetype plugin indent on
 
