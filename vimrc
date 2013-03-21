@@ -11,16 +11,4 @@ exe 'source ' . g:mahewin_vim_repository . 'map.vim'
 exe 'source ' . g:mahewin_vim_repository . 'documentation.vim'
 exe 'source ' . g:mahewin_vim_repository . 'plugins.vim'
 exe 'source ' . g:mahewin_vim_repository . 'misc_configuration.vim'
-
-"""""""""""""""""""""""""""""""""""""""""""
-" Active support mouse in shell
-"""""""""""""""""""""""""""""""""""""""""""
-set mouse=a
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-"Active spelling in french
-""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufEnter *.txt set spell
-autocmd BufEnter *.txt set spelllang=fr
-
 exe 'source ' . g:mahewin_vim_repository . 'common.vim'
