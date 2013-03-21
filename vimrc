@@ -7,6 +7,7 @@
 let g:mahewin_vim_repository = expand("~/.vim_mahewin_repository/")
 
 exe 'source ' . g:mahewin_vim_repository . 'bundle.vim'
+exe 'source ' . g:mahewin_vim_repository . 'map.vim'
 
 """"""""""""""""""""""""""""""""""""""""""
 " Active color syntax and indent
@@ -74,11 +75,6 @@ set cursorline
 set mouse=a
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"Mapping to insert date
-""""""""""""""""""""""""""""""""""""""""""""""""""
-imap \date  <C-R>=strftime("%d/%m/%Y")<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
 "Active spelling in french
 """"""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufEnter *.txt set spell
@@ -93,15 +89,6 @@ runtime ftplugin/man.vim
 au BufReadPost .vimrc map K :exe ":help ".expand("<cword>")<CR>
 au FileType perl map K :exe ":Perldoc "substitute(expand("<cWORD>"), '\v[;]', '', 'g')<CR>
 au FileType python map K :exe ":Pydoc ".expand("<cword>")<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-"Mapping Perl
-""""""""""""""""""""""""""""""""""""""""""""""""""
-map ps :!perl -c %<CR>
-map pd :!perl -d %<CR>
-map px :!perl %<CR>
-map pi :!perl -Ilib %<CR>
-map pt :!prove -l %<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Autocompletion
@@ -133,8 +120,5 @@ let g:syntastic_mode_map = { 'mode': 'active',
 ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
 snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
 let g:miniBufExplMapCTabSwitchWindows = 1
-
-nmap <F8> :TagbarToggle<CR>
-nmap <F11> :NERDTree<CR>
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
