@@ -8,6 +8,7 @@ let g:mahewin_vim_repository = expand("~/.vim_mahewin_repository/")
 
 exe 'source ' . g:mahewin_vim_repository . 'bundle.vim'
 exe 'source ' . g:mahewin_vim_repository . 'map.vim'
+exe 'source ' . g:mahewin_vim_repository . 'documentation.vim'
 
 """"""""""""""""""""""""""""""""""""""""""
 " Active color syntax and indent
@@ -79,16 +80,6 @@ set mouse=a
 """"""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufEnter *.txt set spell
 autocmd BufEnter *.txt set spelllang=fr
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-"Documentation
-""""""""""""""""""""""""""""""""""""""""""""""""""
-runtime ftplugin/man.vim
-"au BufReadPost *.pl   set keywordprg=perldoc\ -f
-"au BufReadPost *.pm   set keywordprg=perldoc\ -f
-au BufReadPost .vimrc map K :exe ":help ".expand("<cword>")<CR>
-au FileType perl map K :exe ":Perldoc "substitute(expand("<cWORD>"), '\v[;]', '', 'g')<CR>
-au FileType python map K :exe ":Pydoc ".expand("<cword>")<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Autocompletion
