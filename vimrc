@@ -4,7 +4,7 @@
 "Website: http://erakis.im
 "Version: 0.1
 """"""""""""""""""""""""""""""""""""""""""
-let g:mahewin_vim_repository = expand("~/.vim_mahewin_repository/")
+let g:mahewin_vim_repository = expand("~/.vim-mahewin-repository/")
 
 exe 'source ' . g:mahewin_vim_repository . 'bundle.vim'
 exe 'source ' . g:mahewin_vim_repository . 'map.vim'
