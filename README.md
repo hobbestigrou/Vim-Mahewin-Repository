@@ -1,5 +1,4 @@
 ### Vim-Mahewin-Repository
-
 A vim setup with cool plugin and colorscheme. Feel free to use and contrib. Inspired by oh-my-zsh.
 
 Included plugins:
@@ -23,7 +22,7 @@ And then make a symbolic link:
 ### Ack.vim:
 :Ack followed by text you wish ack for. It's fairly obvious to navigate the results. Note that you will need ack installed.
 
-### NERD_commenter.vim:
+### NERD\_commenter.vim:
 
 Easy commenting for many filetypes.
 
