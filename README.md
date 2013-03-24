@@ -24,7 +24,9 @@ And then make a symbolic link:
 :Ack followed by text you wish ack for. It's fairly obvious to navigate the results. Note that you will need ack installed.
 
 ### NERD_commenter.vim:
+
 Easy commenting for many filetypes.
-<leader>cc comment out the current line or text selected in visual mode.
-<leader>cn same as <leader>cc but force nesting.
+
+* <leader>cc comment out the current line or text selected in visual mode.
+* <leader>cn same as <leader>cc but force nesting.
 
