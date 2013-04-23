@@ -72,3 +72,9 @@ set lcs:tab:>-,trail:X
 "Can use backspace in all case
 """"""""""""""""""""""""""""""""""""""""""""""""""
 set backspace=2
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"Set encoding file
+""""""""""""""""""""""""""""""""""""""""""""""""""
+set encoding=utf-8
+set fileencoding=utf-8
