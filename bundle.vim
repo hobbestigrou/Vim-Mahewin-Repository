@@ -40,5 +40,6 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'mattn/gist-vim'
 Bundle 'thinca/vim-github'
 Bundle 'klen/python-mode'
+Bundle 'vim-scripts/Tabmerge'
 
 filetype plugin indent on
