@@ -18,3 +18,27 @@ function! Ranger()
 endfunction
 
 nmap <leader>r :call Ranger()<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"Update the repository
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"A function to update if necessary
+function! Get_update()
+    "Get the current path and change the directory to update the good
+    "repository
+    let l:current_path = expand("<sfile>:p:h")
+    let l:path = '~/.vim-mahewin-repository'
+    exec 'cd' l:path
+
+    let l:last_local_commit = system('git rev-parse HEAD')
+    let l:last_remote_comit = system('git ls-remote origin -h refs/heads/master |cut -f1')
+
+    if l:last_local_commit != l:last_remote_comit
+        echo  'Need to be updated, launches updated'
+        :!git pull `git remote` `git rev-parse --abbrev-ref HEAD`
+    endif
+
+    exec 'cd' l:current_path
+endfunction
+
+:call Get_update()
