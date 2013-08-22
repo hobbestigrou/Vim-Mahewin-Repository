@@ -17,3 +17,9 @@ map pt :!prove -l %<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 nmap <F8> :TagbarToggle<CR>
 nmap <F11> :NERDTree<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"Mapping git
+""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <Leader>gp :!git push `git remote` `git rev-parse --abbrev-ref HEAD`<CR>
+nmap <Leader>gpu :!git pull `git remote` `git rev-parse --abbrev-ref HEAD`<CR>
