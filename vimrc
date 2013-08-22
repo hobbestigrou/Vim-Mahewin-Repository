@@ -12,3 +12,7 @@ exe 'source ' . g:mahewin_vim_repository . 'documentation.vim'
 exe 'source ' . g:mahewin_vim_repository . 'plugins.vim'
 exe 'source ' . g:mahewin_vim_repository . 'misc_configuration.vim'
 exe 'source ' . g:mahewin_vim_repository . 'common.vim'
+
+if filereadable(glob("~/.vimrc.local"))
+    exe 'source ' . '~/.vimrc.local'
+endif
