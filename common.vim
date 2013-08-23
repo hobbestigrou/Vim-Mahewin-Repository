@@ -26,7 +26,7 @@ nmap <leader>r :call Ranger()<cr>
 function! Get_update()
     "Get the current path and change the directory to update the good
     "repository
-    let l:current_path = expand("<sfile>:p:h")
+    let l:current_path = getcwd()
     let l:path = '~/.vim-mahewin-repository'
     exec 'cd' l:path
 
