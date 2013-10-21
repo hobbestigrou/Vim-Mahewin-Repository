@@ -39,7 +39,9 @@ Bundle 'fs111/pydoc.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'mattn/gist-vim'
 Bundle 'thinca/vim-github'
-Bundle 'klen/python-mode'
 Bundle 'vim-scripts/Tabmerge'
+Bundle 'vim-scripts/django.vim'
+Bundle 'rking/ag.vim'
+Bundle 'davidhalter/jedi-vim'
 
 filetype plugin indent on
