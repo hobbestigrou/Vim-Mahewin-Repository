@@ -36,3 +36,8 @@ map <Leader>gd :Gdiff<CR>
 map <Leader>gc :Gcommit<CR>
 map <Leader>gb :Gblame<CR>
 map <Leader>gl :Glog<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Ctrlp
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_user_command = 'ag --nogroup --nobreak --noheading --nocolor -g "" %s '
