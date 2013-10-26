@@ -28,9 +28,9 @@ Bundle 'majutsushi/tagbar'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-markdown'
 Bundle 'mattn/webapi-vim'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "honza/snipmate-snippets"
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
