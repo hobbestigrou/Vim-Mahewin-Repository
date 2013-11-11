@@ -11,6 +11,16 @@ Included plugins:
 
 ### Install
 
+*Via curl*:
+
+    curl -L https://github.com/hobbestigrou/Vim-Mahewin-Repository/blob/master/install.sh | sh
+
+*Via wget*:
+
+    wget --no-check-certificate https://github.com/hobbestigrou/Vim-Mahewin-Repository/blob/master/install.sh -O - | sh
+
+*Manually*:
+
 To install the project simply clone:
 
     git clone https://github.com/hobbestigrou/Vim-Mahewin-Repository.git .vim-mahewin-repository
