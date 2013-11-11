@@ -13,11 +13,11 @@ Included plugins:
 
 **Via curl**:
 
-    curl -L https://github.com/hobbestigrou/Vim-Mahewin-Repository/blob/master/install.sh | sh
+    curl -L https://github.com/hobbestigrou/Vim-Mahewin-Repository/raw/master/install.sh | bash
 
 **Via wget**:
 
-    wget --no-check-certificate https://github.com/hobbestigrou/Vim-Mahewin-Repository/blob/master/install.sh -O - | sh
+    wget --no-check-certificate https://github.com/hobbestigrou/Vim-Mahewin-Repository/raw/master/install.sh -O - | bash
 
 **Manually**:
 
