@@ -5,8 +5,13 @@
 function! Ranger()
     " Get a temp file name without creating it
     let tmpfile = substitute(system('mktemp -u'), '\n', '', '')
+
     " Launch ranger, passing it the temp file name
     silent exec '!RANGER_RETURN_FILE='.tmpfile.' ranger'
+    if v:shell_error != 0
+         echoerr 'Ranger is not installed'
+    endif
+
     " If the temp file has been written by ranger
     if filereadable(tmpfile)
         " Get the selected file name from the temp file
@@ -15,6 +20,7 @@ function! Ranger()
         call delete(tmpfile)
     endif
     redraw!
+
 endfunction
 
 nmap <leader>r :call Ranger()<cr>
