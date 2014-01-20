@@ -22,10 +22,5 @@ function install_vundle() {
     vim +BundleInstall +qall
 }
 
-if [ "$(which ranger)" == "" ];
-then
-        echo "Warning ranger is not installed, so not possible to us <leader> r"
-fi
-
-#install_mahewin_repository
-#install_vundle
+install_mahewin_repository
+install_vundle
