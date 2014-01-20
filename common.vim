@@ -16,7 +16,6 @@ function! Ranger()
     endif
     redraw!
 endfunction
-
 nmap <leader>r :call Ranger()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -40,5 +39,4 @@ function! Get_update()
 
     exec 'cd' l:current_path
 endfunction
-
-:call Get_update()
+nmap <leader>u :call Get_update()<cr>
