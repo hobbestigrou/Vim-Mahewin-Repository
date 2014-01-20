@@ -2,6 +2,11 @@
 
 #Clone vim-mahewin-repository to install
 function install_mahewin_repository() {
+    if [ "$(which ranger)" == "" ];
+    then
+        echo "Warning ranger is not installed, so not possible to us <leader>r"
+    fi
+
     git clone https://github.com/hobbestigrou/Vim-Mahewin-Repository.git $HOME/.vim-mahewin-repository
     ln -s $HOME/.vim-mahewin-repository/vimrc $HOME/.vimrc
 }
