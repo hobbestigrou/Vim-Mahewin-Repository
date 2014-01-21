@@ -41,3 +41,15 @@ map <Leader>gl :Glog<CR>
 "Ctrlp
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_user_command = 'ag --nogroup --nobreak --noheading --nocolor -g "" %s '
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Fortune vimtips
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if !exists('g:fortune_display_in_gvim')
+    let g:fortune_display_in_gvim = 0
+endif
+
+if has("gui_running") && !g:fortune_display_in_gvim
+    let g:fortune_vimtips_auto_display = 0
+endif
