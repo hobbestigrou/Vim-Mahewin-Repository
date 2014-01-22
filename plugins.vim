@@ -21,6 +21,11 @@ let g:miniBufExplMapCTabSwitchWindows = 1
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Ag configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+cabbrev Ag Ag!
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Gist configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gist_detect_filetype = 1
@@ -41,7 +46,6 @@ map <Leader>gl :Glog<CR>
 "Ctrlp
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_user_command = 'ag --nogroup --nobreak --noheading --nocolor -g "" %s '
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Fortune vimtips
