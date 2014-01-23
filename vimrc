@@ -7,6 +7,7 @@
 let g:mahewin_vim_repository = expand("~/.vim-mahewin-repository/")
 
 exe 'source ' . g:mahewin_vim_repository . 'bundle.vim'
+exe 'source ' . g:mahewin_vim_repository . 'alias.vim'
 exe 'source ' . g:mahewin_vim_repository . 'map.vim'
 exe 'source ' . g:mahewin_vim_repository . 'documentation.vim'
 exe 'source ' . g:mahewin_vim_repository . 'plugins.vim'
