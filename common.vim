@@ -22,7 +22,9 @@ function! Ranger()
     redraw!
 
 endfunction
+
 nmap <leader>r :call Ranger()<cr>
+command! Ranger call Ranger()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Update the repository
@@ -47,4 +49,6 @@ function! Get_update()
 
     exec 'cd' l:current_path
 endfunction
+
 nmap <leader>u :call Get_update()<cr>
+command! GetUpdateVimMahewinRepository call Get_update()
