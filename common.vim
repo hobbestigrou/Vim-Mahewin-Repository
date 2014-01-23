@@ -41,6 +41,8 @@ function! Get_update()
     if l:last_local_commit != l:last_remote_comit
         echo  'Need to be updated, launches updated'
         :!git pull origin `git rev-parse --abbrev-ref HEAD`
+    else
+        echo 'Vim-Mahewin-Repository is up to date.'
     endif
 
     exec 'cd' l:current_path
