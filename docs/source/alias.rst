@@ -12,7 +12,7 @@ Save and quit
 All aliases to save and quit.
 
 Save
-____
+----
 
 .. code_block:: vim
 
