@@ -42,7 +42,7 @@ function! Get_update()
         echo  'Need to be updated, launches updated'
         :!git pull origin `git rev-parse --abbrev-ref HEAD`
     else
-        echo 'Vim-Mahewin-Repository is up to date.'
+        echo 'Already up-to-date.'
     endif
 
     exec 'cd' l:current_path
