@@ -19,6 +19,7 @@ Contents:
    alias
    install
    common
+   plugins
 
 
 
