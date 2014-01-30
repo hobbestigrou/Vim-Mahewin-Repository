@@ -9,6 +9,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_mode_map = { 'mode': 'active',
   \ 'active_filetypes': ['perl', 'python', 'c'],
   \ 'passive_filetypes': ['php'] }
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_style_error_symbol = 'S✗'
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_style_warning_symbol = 'S⚠'
+
 
 ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
 snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
