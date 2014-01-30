@@ -16,8 +16,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   alias
    install
+   alias
    common
    plugins
 
