@@ -19,12 +19,6 @@ ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
 snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
 let g:miniBufExplMapCTabSwitchWindows = 1
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Ack configuration
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Ag configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
