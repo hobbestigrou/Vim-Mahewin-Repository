@@ -1,5 +1,5 @@
 Plugins
--------
+=======
 Vim-Mahewin-Repository comes with plugins and are configured to most. Each
 configuration options can be overridden in the configuration file vimrc.local.
 
