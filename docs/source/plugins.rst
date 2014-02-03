@@ -34,3 +34,9 @@ Vundle is a Vim plugin manager.
 Update
 ______
 To update plugins it's possible to use :BundleInstall! or keymap <leader>vu.
+
+Tagbar
+------
+Tagbar is a Vim plugin for browsing the tags of source code files. It provides
+a sidebar that displays the ctags, need install exuberant-ctags, use F9 to
+toggle the tagbar window.
