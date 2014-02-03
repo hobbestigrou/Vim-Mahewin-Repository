@@ -42,7 +42,7 @@ function! Get_update()
 
     if l:last_local_commit != l:last_remote_comit
         echo  'Need to be updated, launches updated'
-        :!git pull origin `git rev-parse --abbrev-ref HEAD`
+        :Git pull origin master
     else
         echo 'Already up-to-date.'
     endif
