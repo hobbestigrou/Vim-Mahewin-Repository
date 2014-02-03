@@ -26,3 +26,11 @@ To check syntax of PHP file you need explicitly call SyntasticCheck command.
 Information
 ___________
 To see information about the current file you can call SyntasticInfo command.
+
+Vundle
+------
+Vundle is a Vim plugin manager.
+
+Update
+______
+To update plugins it's possible to use :BundleInstall! or keymap <leader>vu.
