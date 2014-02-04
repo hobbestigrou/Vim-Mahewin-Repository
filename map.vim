@@ -15,5 +15,5 @@ map pt :!prove -l %<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Mapping git
 """"""""""""""""""""""""""""""""""""""""""""""""""
-nmap <Leader>gp :!git push `git remote` `git rev-parse --abbrev-ref HEAD`<CR>
-nmap <Leader>gpu :!git pull `git remote` `git rev-parse --abbrev-ref HEAD`<CR>
+nmap <Leader>gp :Git push origin `git rev-parse --abbrev-ref HEAD`<CR>
+nmap <Leader>gpu :Git pull origin `git rev-parse --abbrev-ref HEAD`<CR>
