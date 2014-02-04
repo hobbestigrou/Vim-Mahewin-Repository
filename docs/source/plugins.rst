@@ -40,3 +40,25 @@ Tagbar
 Tagbar is a Vim plugin for browsing the tags of source code files. It provides
 a sidebar that displays the ctags, need install exuberant-ctags, use F9 to
 toggle the tagbar window.
+
+
+Custom plugin
+-------------
+
+Install
+_______
+To install plugins that are not provided by Vim-Mahewin-Repository it is
+possible to create a file call .bundle.local in the user directory:
+
+
+.. code-block:: vim
+
+    Bundle 'benmills/vimux'
+
+After adding the line, it must run the command :BundleInstall that all. But if
+you find an interesting plugin do enjoy the community and made a pull request.
+
+Uninstall
+_________
+To uninstall a custom plugin, remove the line of the file and run the command
+:BundleClean to remove the plugin of .vim directory.
