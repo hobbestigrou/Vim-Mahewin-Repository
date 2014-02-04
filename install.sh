@@ -7,6 +7,7 @@ function install_mahewin_repository() {
         echo "Warning ranger is not installed, so not possible to us <leader>r"
     fi
 
+    check_git
     git clone https://github.com/hobbestigrou/Vim-Mahewin-Repository.git $HOME/.vim-mahewin-repository
     ln -s $HOME/.vim-mahewin-repository/vimrc $HOME/.vimrc
 }
@@ -20,6 +21,15 @@ function install_vundle() {
         git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
     fi
     vim +BundleInstall +qall
+}
+
+#To check if git is installed
+function check_git() {
+    if [ "$(which git)" == "" ];
+    then
+        echo "Install git"
+        sudo apt-get install --force-yes --yes git-core
+    fi
 }
 
 install_mahewin_repository
