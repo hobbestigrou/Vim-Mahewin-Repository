@@ -43,4 +43,8 @@ Bundle 'vim-scripts/django.vim'
 Bundle 'rking/ag.vim'
 Bundle 'davidhalter/jedi-vim'
 
+if filereadable(glob("~/.bundle.local"))
+    exe 'source ' . '~/.bundle.local'
+endif
+
 filetype plugin indent on
