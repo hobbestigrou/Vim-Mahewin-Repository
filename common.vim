@@ -52,3 +52,17 @@ endfunction
 
 nmap <leader>u :call Get_update()<cr>
 command! GetUpdateVimMahewinRepository call Get_update()
+
+function! Create_git_branch(...)
+    if (a:0)
+        exec 'Git checkout -b' a:1
+    else
+        let l:branch_name = input('Give a branch name: ')
+        exec 'Git checkout -b' l:branch_name
+    endif
+
+    return ''
+endfunction
+
+nmap <leader>gbc :call Create_git_branch()<cr>
+command! -nargs=1 CreateGitBranch call Create_git_branch(<f-args>)

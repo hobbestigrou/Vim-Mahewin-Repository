@@ -46,3 +46,20 @@ With the mapping:
     <leader>u
 
 It takes the master version of git repository.
+
+Create Git Branch
+-----------------
+A function to create a local branch, you have two possibility. Call the command
+or use the mapping.
+
+.. code-block:: vim
+
+    :Create_git_branch
+
+With the mapping:
+
+.. code-block:: vim
+
+    <leader>gbc
+
+It uses the option -b from checkout is therefore moves in the branch created.
