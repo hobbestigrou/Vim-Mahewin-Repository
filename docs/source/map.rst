@@ -22,7 +22,7 @@ To pull a git repository in the normal mode:
 
 .. code-block:: vim
 
-    <leader>gp
+    <leader>gpu
 
 Use the current branch.
 
@@ -32,6 +32,6 @@ To push code in the normal mode:
 
 .. code-block:: vim
 
-    <leader>gpu
+    <leader>gp
 
 Use the current branch.
