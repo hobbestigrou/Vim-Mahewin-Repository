@@ -53,6 +53,10 @@ endfunction
 nmap <leader>u :call Get_update()<cr>
 command! GetUpdateVimMahewinRepository call Get_update()
 
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"Create a git branch
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"A function to create a git local branch
 function! Create_git_branch(...)
     if (a:0)
         exec 'Git checkout -b' a:1
