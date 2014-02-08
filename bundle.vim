@@ -15,6 +15,7 @@ Bundle 'gmarik/vundle'
 """"""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'hobbestigrou/vimtips-fortune'
 Bundle 'hobbestigrou/Mahewincs'
+Bundle 'hobbestigrou/VimMahewinHub'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
 Bundle 'godlygeek/tabular'
