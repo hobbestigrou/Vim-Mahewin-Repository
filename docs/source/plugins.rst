@@ -42,6 +42,11 @@ a sidebar that displays the ctags, need install exuberant-ctags, use F9 to
 toggle the tagbar window.
 
 
+NERDTree
+--------
+The NERD tree allows you to explore your filesystem and to open files and
+directories. Use F11 to display the tree and q to quit the tree.
+
 Custom plugin
 -------------
 
