@@ -58,6 +58,15 @@ command! GetUpdateVimMahewinRepository call Get_update()
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "A function to create a git local branch
 function! Create_git_branch(...)
+    let l:current_branch = system("git rev-parse --abbrev-ref HEAD")
+
+    if (l:current_branch != 'master')
+        exec 'Git checkout master'
+        exec 'Git pull origin master'
+    else
+        exec 'Git pull origin master'
+    endif
+
     if (a:0)
         exec 'Git checkout -b' a:1
     else
