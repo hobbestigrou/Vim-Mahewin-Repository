@@ -79,3 +79,27 @@ endfunction
 
 nmap <leader>gbc :call Create_git_branch()<cr>
 command! -nargs=1 CreateGitBranch call Create_git_branch(<f-args>)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"Remove git branch
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"A function to remove all local branch
+function! Remove_all_git_branch()
+    let l:branch_merged  = split(system('git branch --merged'), "\n")
+    let l:current_branch = system("git rev-parse --abbrev-ref HEAD")
+
+    for l:branch_name in l:branch_merged
+        if s:strip(l:branch_name) == '* master' || s:strip(l:branch_name) == l:current_branch
+            break
+        endif
+
+        exec 'Git branch -d' l:branch_name
+    endfor
+endfunction
+
+nmap <leader>gbd :call Remove_all_git_branch()<cr>
+command! RemoveAllGitBranch call Remove_all_git_branch(<f-args>)
+
+function! s:strip(str)
+    return substitute(a:str, '^\s*\(.\{-}\)\s*$', '\1', '')
+endfunction
