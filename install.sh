@@ -18,8 +18,20 @@ function install_vundle() {
     if [ ! -e "$HOME/.vim" ]
     then
         mkdir "$HOME/.vim"
-        git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
+    else
+        read -p "You have a .vim directory, do you wan't remove or not(Y, y): "
+        if [[ $REPLY =~ ^[Yy]$ ]]
+        then
+            rm -rf $HOME/.vim
+        else
+            if [ ! -e "$HOME/.vim/bundle/vundle" ]
+            then
+                rm -rf $HOME/.vim/bundle/vundle
+            fi
+        fi
     fi
+
+    git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
     vim +BundleInstall +qall
 }
 
