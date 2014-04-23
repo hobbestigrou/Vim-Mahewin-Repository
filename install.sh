@@ -25,7 +25,7 @@ function install_vundle() {
     then
         mkdir "$HOME/.vim"
     else
-        read -p "You have a .vim directory, do you wan't remove or not(Y, y): "
+        read -p "You have a .vim directory, do you want remove or not(Y, y): "
         if [[ $REPLY =~ ^[Yy]$ ]]
         then
             rm -rf "$HOME/.vim"
