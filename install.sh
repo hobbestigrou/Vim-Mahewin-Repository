@@ -2,12 +2,18 @@
 
 #Clone vim-mahewin-repository to install
 function install_mahewin_repository() {
-    if [ "$(which ranger)" == "" ];
+    if [ "$(which ranger)" == "" ]
     then
         echo "Warning ranger is not installed, so not possible to us <leader>r"
     fi
 
     check_git
+
+    if [ -e "$HOME/.vim-mahewin-repository" ]
+    then
+        rm -rf "$HOME/.vim-mahewin-repository"
+    fi
+
     git clone https://github.com/hobbestigrou/Vim-Mahewin-Repository.git $HOME/.vim-mahewin-repository
     ln -s $HOME/.vim-mahewin-repository/vimrc $HOME/.vimrc
 }
@@ -22,11 +28,12 @@ function install_vundle() {
         read -p "You have a .vim directory, do you wan't remove or not(Y, y): "
         if [[ $REPLY =~ ^[Yy]$ ]]
         then
-            rm -rf $HOME/.vim
+            rm -rf "$HOME/.vim"
+            mkdir "$HOME/.vim"
         else
-            if [ ! -e "$HOME/.vim/bundle/vundle" ]
+            if [ -e "$HOME/.vim/bundle/vundle" ]
             then
-                rm -rf $HOME/.vim/bundle/vundle
+                rm -rf "$HOME/.vim/bundle/vundle"
             fi
         fi
     fi
@@ -37,7 +44,7 @@ function install_vundle() {
 
 #To check if git is installed
 function check_git() {
-    if [ "$(which git)" == "" ];
+    if [ "$(which git)" == "" ]
     then
         echo "Install git"
         sudo apt-get install --force-yes --yes git-core
