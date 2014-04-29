@@ -15,7 +15,22 @@ function install_mahewin_repository() {
     fi
 
     git clone https://github.com/hobbestigrou/Vim-Mahewin-Repository.git $HOME/.vim-mahewin-repository
-    ln -s $HOME/.vim-mahewin-repository/vimrc $HOME/.vimrc
+
+
+    if [ -e $HOME/.vimrc ]
+    then
+        read -p "You have vim configuration file, did you want use it with vim-mahewin-repository, say no if vim-mahewin-repository is already use(Y, y): "
+        if [[ $REPLY =~ ^[Yy]$ ]]
+        then
+            mv $HOME/.vimrc $HOME/.vimrc.local
+            ln -s $HOME/.vim-mahewin-repository/vimrc $HOME/.vimrc
+        else
+            rm $HOME/.vimrc
+            ln -s $HOME/.vim-mahewin-repository/vimrc $HOME/.vimrc
+        fi
+    else
+        ln -s $HOME/.vim-mahewin-repository/vimrc $HOME/.vimrc
+    fi
 }
 
 
@@ -25,7 +40,7 @@ function install_vundle() {
     then
         mkdir "$HOME/.vim"
     else
-        read -p "You have a .vim directory, do you want remove or not(Y, y): "
+        read -p "You have a .vim directory, do you want remove the directory or not(Y, y): "
         if [[ $REPLY =~ ^[Yy]$ ]]
         then
             rm -rf "$HOME/.vim"
