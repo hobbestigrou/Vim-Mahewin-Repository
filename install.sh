@@ -61,8 +61,13 @@ function install_vundle() {
 function check_git() {
     if [ "$(which git)" == "" ]
     then
-        echo "Install git"
-        sudo apt-get install --force-yes --yes git-core
+        if [ -e /etc/debian_version ]
+        then
+            echo "Install git"
+            sudo apt-get install --force-yes --yes git-core
+        else
+            echo "You must install git"
+        fi
     fi
 }
 
