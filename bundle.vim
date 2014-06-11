@@ -43,6 +43,7 @@ Bundle 'vim-scripts/Tabmerge'
 Bundle 'vim-scripts/django.vim'
 Bundle 'rking/ag.vim'
 Bundle 'davidhalter/jedi-vim'
+Bundle 'groenewege/vim-less'
 
 if filereadable(glob("~/.bundle.local"))
     exe 'source ' . '~/.bundle.local'
