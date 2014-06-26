@@ -63,3 +63,5 @@ With the mapping:
     <leader>gbc
 
 It uses the option -b from checkout is therefore moves in the branch created.
+The command use stash to be sure the repository is clean before create the new
+branch.
