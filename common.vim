@@ -60,6 +60,9 @@ command! GetUpdateVimMahewinRepository call Get_update()
 function! Create_git_branch(...)
     let l:current_branch = system("git rev-parse --abbrev-ref HEAD")
 
+    set autoread
+    exec 'Git stash'
+
     if (l:current_branch != 'master')
         exec 'Git checkout master'
         exec 'Git pull origin master'
@@ -73,6 +76,14 @@ function! Create_git_branch(...)
         let l:branch_name = input('Give a branch name: ')
         exec 'Git checkout -b' l:branch_name
     endif
+
+    silent exec 'Git stash pop'
+
+    "Refresh the screen, force to reload the file and deactivate skip the
+    "prompt
+    redraw!
+    e!
+    set noautoread
 
     return ''
 endfunction
