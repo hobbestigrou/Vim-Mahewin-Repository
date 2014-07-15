@@ -20,6 +20,8 @@ Contents:
    alias
    common
    plugins
+   swap
+   release
 
 
 
