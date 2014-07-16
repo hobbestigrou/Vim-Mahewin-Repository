@@ -18,8 +18,6 @@ function! Delete_all_swap_file()
             silent call delete(current_swap)
         endif
     endfor
-
-    "delete(l:swap_file)
 endfunction
 
 command! DeleteAllSwapFile call Delete_all_swap_file()
