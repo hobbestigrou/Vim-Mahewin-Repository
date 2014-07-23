@@ -59,9 +59,12 @@ command! GetUpdateVimMahewinRepository call Get_update()
 "A function to create a git local branch
 function! Create_git_branch(...)
     let l:current_branch = system("git rev-parse --abbrev-ref HEAD")
+    let l:is_file_modify = system("git ls-files -m") != '' ? 1 : 0
 
-    set autoread
-    exec 'Git stash'
+    if l:is_file_modify == 1
+        set autoread
+        exec 'Git stash'
+    endif
 
     if (l:current_branch != 'master')
         exec 'Git checkout master'
@@ -77,7 +80,9 @@ function! Create_git_branch(...)
         exec 'Git checkout -b' l:branch_name
     endif
 
-    silent exec 'Git stash pop'
+    if l:is_file_modify == 1
+        silent exec 'Git stash pop'
+    endif
 
     "Refresh the screen, force to reload the file and deactivate skip the
     "prompt
