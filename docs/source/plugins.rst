@@ -47,6 +47,28 @@ NERDTree
 The NERD tree allows you to explore your filesystem and to open files and
 directories. Use F11 to display the tree and q to quit the tree.
 
+Fortune vimtips
+---------------
+Fortune vimtips is a project inspired by fortune software to display vimtips.
+Open a new horizontal split buffer to display the vimtips.
+
+Disable auto display
+____________________
+Activate by default it's obvious to disable auto display, to deactivate the
+auto display add this line on your .vimrc.local:
+
+.. code-block:: vim
+
+    let g:fortune_vimtips_auto_display = 0
+
+Then it's possible to display vimtips with the command:
+
+.. code-block:: vim
+
+    :Fortune
+
+When you want learn few new things about vim.
+
 Custom plugin
 -------------
 
