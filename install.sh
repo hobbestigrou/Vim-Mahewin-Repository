@@ -2,22 +2,25 @@
 
 #Clone vim-mahewin-repository to install
 function install_mahewin_repository() {
-    if [ "$(which ranger)" == "" ]
+    if [[ "$(which ranger)" == "" ]]
     then
         echo "Warning ranger is not installed, so not possible to us <leader>r"
     fi
 
     check_git
 
-    if [ -e "$HOME/.vim-mahewin-repository" ]
+    if [[ -e "$HOME/.vim-mahewin-repository" ]]
     then
         rm -rf "$HOME/.vim-mahewin-repository"
     fi
 
     git clone https://github.com/hobbestigrou/Vim-Mahewin-Repository.git $HOME/.vim-mahewin-repository
+    manage_vimrc_file
+}
 
-
-    if [ -e $HOME/.vimrc ]
+#Check if a vimrc file exist
+function manage_vimrc_file() {
+    if [[ -e "$HOME/.vimrc" ]]
     then
         read -p "You have vim configuration file, did you want use it with vim-mahewin-repository, say no if vim-mahewin-repository is already use(Y, y): "
         if [[ $REPLY =~ ^[Yy]$ ]]
@@ -33,10 +36,9 @@ function install_mahewin_repository() {
     fi
 }
 
-
 #Clone and exec vundle to install package
 function install_vundle() {
-    if [ ! -e "$HOME/.vim" ]
+    if [[ ! -e "$HOME/.vim" ]]
     then
         mkdir "$HOME/.vim"
     else
@@ -46,7 +48,7 @@ function install_vundle() {
             rm -rf "$HOME/.vim"
             mkdir "$HOME/.vim"
         else
-            if [ -e "$HOME/.vim/bundle/vundle" ]
+            if [[ -e "$HOME/.vim/bundle/vundle" ]]
             then
                 rm -rf "$HOME/.vim/bundle/vundle"
             fi
@@ -59,9 +61,9 @@ function install_vundle() {
 
 #To check if git is installed
 function check_git() {
-    if [ "$(which git)" == "" ]
+    if [[ "$(which git)" == "" ]]
     then
-        if [ -e /etc/debian_version ]
+        if [[ -e "/etc/debian_version" ]]
         then
             echo "Install git"
             sudo apt-get install --force-yes --yes git-core
