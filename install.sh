@@ -7,6 +7,7 @@ function install_mahewin_repository() {
         echo "Warning ranger is not installed, so not possible to us <leader>r"
     fi
 
+    check_vim
     check_git
 
     if [[ -e "$HOME/.vim-mahewin-repository" ]]
@@ -69,6 +70,20 @@ function check_git() {
             sudo apt-get install --force-yes --yes git-core
         else
             echo "You must install git"
+        fi
+    fi
+}
+
+#To check if vim is installed
+function check_vim() {
+    if [[ "$(which vim)" == "" ]]
+    then
+        if [[ -e "/etc/debian_version" ]]
+        then
+            echo "Install vim"
+            sudo apt-get install --force-yes --yes vim-tiny
+        else
+            echo "You must install vim"
         fi
     fi
 }
