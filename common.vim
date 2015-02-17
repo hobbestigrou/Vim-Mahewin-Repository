@@ -114,7 +114,7 @@ function! Remove_all_git_branch()
         exec 'Git branch -d' l:branch_name
 
         if (index(l:remote_branch, l:remote) >= 0)
-            exec 'Git push origin --delete' . s:strip(l:branch_name)
+            exec 'Git push origin --delete ' . s:strip(l:branch_name)
         endif
     endfor
 endfunction
