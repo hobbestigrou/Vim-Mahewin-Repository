@@ -65,3 +65,21 @@ With the mapping:
 It uses the option -b from checkout is therefore moves in the branch created.
 The command use stash to be sure the repository is clean before create the new
 branch.
+
+Remove All Git Branch
+---------------------
+A function to remove all local branch if it's merged on master. If the branch
+exist on the remote it was also delete in the remote. Call the command or use
+the mapping.
+
+.. code-block:: vim
+
+    :RemoveAllGitBranch
+
+With the mappingL
+
+.. code-block:: vim
+
+    <leader>gbd
+
+If the branch exist on the remote it was also delete in the remote.
