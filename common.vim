@@ -103,13 +103,19 @@ command! -nargs=1 CreateGitBranch call Create_git_branch(<f-args>)
 function! Remove_all_git_branch()
     let l:branch_merged  = split(system('git branch --merged'), "\n")
     let l:current_branch = system("git rev-parse --abbrev-ref HEAD")
+    let l:remote_branch  = split(system("git branch --remotes"), "\n")
 
     for l:branch_name in l:branch_merged
         if s:strip(l:branch_name) == '* master' || s:strip(l:branch_name) == l:current_branch
             break
         endif
 
+        let l:remote = '  origin/' . s:strip(l:branch_name)
         exec 'Git branch -d' l:branch_name
+
+        if (index(l:remote_branch, l:remote) >= 0)
+            exec 'Git push origin --delete' . s:strip(l:branch_name)
+        endif
     endfor
 endfunction
 
