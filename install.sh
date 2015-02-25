@@ -49,9 +49,9 @@ function install_vundle() {
             rm -rf "$HOME/.vim"
             mkdir "$HOME/.vim"
         else
-            if [[ -e "$HOME/.vim/bundle/vundle" ]]
+            if [[ -e "$HOME/.vim/bundle/Vundle.vim" ]]
             then
-                rm -rf "$HOME/.vim/bundle/vundle"
+                rm -rf "$HOME/.vim/bundle/Vundle.vim"
             fi
         fi
     fi
