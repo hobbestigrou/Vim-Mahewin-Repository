@@ -56,7 +56,7 @@ function install_vundle() {
         fi
     fi
 
-    git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
+    git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/vundle
     vim +BundleInstall +qall
 }
 
@@ -81,7 +81,7 @@ function check_vim() {
         if [[ -e "/etc/debian_version" ]]
         then
             echo "Install vim"
-            sudo apt-get install --force-yes --yes vim-tiny
+            sudo apt-get install --force-yes --yes vim
         else
             echo "You must install vim"
         fi
