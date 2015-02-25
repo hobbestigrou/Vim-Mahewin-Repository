@@ -56,8 +56,9 @@ function install_vundle() {
         fi
     fi
 
-    git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/vundle
-    vim +BundleInstall +qall
+    echo "Install Vundle"
+    git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+    vim +PluginInstall +qall
 }
 
 #To check if git is installed
