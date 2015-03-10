@@ -15,7 +15,7 @@ function install_mahewin_repository() {
         rm -rf "$HOME/.vim-mahewin-repository"
         if [[ $? -ne 0 ]]
         then
-            echo "Can not remove the .vim-mahewin-repository directory"
+            echo "Can't remove the .vim-mahewin-repository directory"
             exit 1
         fi
     fi
@@ -31,7 +31,7 @@ function manage_vimrc_file() {
         rm $HOME/.vimrc
         if [[ $? -ne 0 ]]
         then
-            echo "Can not remove the symbolic .vimrc link"
+            echo "Can't remove the symbolic .vimrc link"
             exit 1
         fi
     fi
@@ -44,28 +44,28 @@ function manage_vimrc_file() {
             mv $HOME/.vimrc $HOME/.vimrc.local
             if [[ $? -ne 0 ]]
             then
-                echo "Can not rename the .vimrc file to .vimrc.local"
+                echo "Can't rename the .vimrc file to .vimrc.local"
                 exit 1
             fi
 
             ln -s $HOME/.vim-mahewin-repository/vimrc $HOME/.vimrc
             if [[ $? -ne 0 ]]
             then
-                echo "Can not make the .vimrc symbolic link"
+                echo "Can't make the .vimrc symbolic link"
                 exit 1
             fi
         else
             rm $HOME/.vimrc
             if [[ $? -ne 0 ]]
             then
-                echo "Can not remove the .vimrc file"
+                echo "Can't remove the .vimrc file"
                 exit 1
             fi
 
             ln -s $HOME/.vim-mahewin-repository/vimrc $HOME/.vimrc
             if [[ $? -ne 0 ]]
             then
-                echo "Can not make the .vimrc symbolic link"
+                echo "Can't make the .vimrc symbolic link"
                 exit 1
             fi
         fi
@@ -73,7 +73,7 @@ function manage_vimrc_file() {
         ln -s $HOME/.vim-mahewin-repository/vimrc $HOME/.vimrc
         if [[ $? -ne 0 ]]
         then
-            echo "Can not make the .vimrc symbolic link"
+            echo "Can't make the .vimrc symbolic link"
             exit 1
         fi
     fi
@@ -86,7 +86,7 @@ function install_vundle() {
         mkdir "$HOME/.vim"
         if [[ $? -ne 0 ]]
         then
-            echo "Can not create the .vim directory"
+            echo "Can't create the .vim directory"
             exit 1
         fi
     else
@@ -96,14 +96,14 @@ function install_vundle() {
             rm -rf "$HOME/.vim"
             if [[ $? -ne 0 ]]
             then
-                echo "Can not remove the .vim directory"
+                echo "Can't remove the .vim directory"
                 exit 1
             fi
 
             mkdir "$HOME/.vim"
             if [[ $? -ne 0 ]]
             then
-                echo "Can not create the .vim directory"
+                echo "Can't create the .vim directory"
                 exit 1
             fi
         else
@@ -112,7 +112,7 @@ function install_vundle() {
                 rm -rf "$HOME/.vim/bundle/Vundle.vim"
                 if [[ $? -ne 0 ]]
                 then
-                    echo "Can not remove the bundle directory"
+                    echo "Can't remove the bundle directory"
                     exit 1
                 fi
             fi
@@ -134,7 +134,7 @@ function check_git() {
             sudo apt-get install --force-yes --yes git-core
             if [[ $? -ne 0 ]]
             then
-                echo "Can not install git-core"
+                echo "Can't install git"
                 exit 1
             fi
         else
@@ -153,7 +153,7 @@ function check_vim() {
             sudo apt-get install --force-yes --yes vim
             if [[ $? -ne 0 ]]
             then
-                echo "Can not install vim"
+                echo "Can't install vim"
                 exit 1
             fi
         else
