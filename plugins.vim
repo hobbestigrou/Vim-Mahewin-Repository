@@ -49,7 +49,10 @@ let g:ctrlp_user_command = 'ag --nogroup --nobreak --noheading --nocolor -g "" %
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Fortune vimtips
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:fortune_vimtips_display_in_window = 0
+
 if !exists('g:fortune_display_in_gvim')
     let g:fortune_display_in_gvim = 0
 endif

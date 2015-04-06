@@ -41,7 +41,6 @@ Tagbar is a Vim plugin for browsing the tags of source code files. It provides
 a sidebar that displays the ctags, need install exuberant-ctags, use F9 to
 toggle the tagbar window.
 
-
 NERDTree
 --------
 The NERD tree allows you to explore your filesystem and to open files and
@@ -51,6 +50,17 @@ Fortune vimtips
 ---------------
 Fortune vimtips is a project inspired by fortune software to display vimtips.
 Open a new horizontal split buffer to display the vimtips.
+
+Display in a new window
+_______________________
+By default it's display in a message, but it's be possible to display in a new
+buffer:
+
+.. code-block:: vim
+
+    let g:fortune_vimtips_display_in_window = 0
+
+Be display in a new vertical split.
 
 Disable auto display
 ____________________
