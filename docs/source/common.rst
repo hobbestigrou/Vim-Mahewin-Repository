@@ -64,7 +64,8 @@ With the mapping:
 
 It uses the option -b from checkout is therefore moves in the branch created.
 The command use stash to be sure the repository is clean before create the new
-branch.
+branch. Can take two parameters the first one is the name of the branch to
+create the other one is the branch on must be based.
 
 Remove All Git Branch
 ---------------------

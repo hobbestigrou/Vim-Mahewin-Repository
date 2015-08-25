@@ -60,17 +60,18 @@ command! GetUpdateVimMahewinRepository call Get_update()
 function! Create_git_branch(...)
     let l:current_branch = system("git rev-parse --abbrev-ref HEAD")
     let l:is_file_modify = system("git ls-files -m") != '' ? 1 : 0
+    let l:based_branch   = a:0 >= 2 ? a:2 : 'master'
 
     if l:is_file_modify == 1
         set autoread
         exec 'Git stash'
     endif
 
-    if (l:current_branch != 'master')
-        exec 'Git checkout master'
-        exec 'Git pull origin master'
+    if (l:current_branch != l:based_branch)
+        exec 'Git checkout' l:based_branch
+        exec 'Git pull origin' l:based_branch
     else
-        exec 'Git pull origin master'
+        exec 'Git pull origin ' l:based_branch
     endif
 
     if (a:0)
@@ -94,7 +95,7 @@ function! Create_git_branch(...)
 endfunction
 
 nmap <leader>gbc :call Create_git_branch()<cr>
-command! -nargs=1 CreateGitBranch call Create_git_branch(<f-args>)
+command! -nargs=* CreateGitBranch call Create_git_branch(<f-args>)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Remove git branch
