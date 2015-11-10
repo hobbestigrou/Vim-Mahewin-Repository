@@ -3,7 +3,13 @@
 """"""""""""""""""""""""""""""""""""""""""
 set nocompatible
 syntax on
-colorscheme Mahewincs "Thème pour la coloration syntaxique
+
+try
+    colorscheme Mahewincs "Thème pour la coloration syntaxique
+catch /E185/
+    colorscheme desert
+endtry
+
 set ai "Pour l'autoindetation
 set expandtab
 set shiftwidth=4
