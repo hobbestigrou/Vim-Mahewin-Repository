@@ -76,6 +76,8 @@ nmap <F9> :TagbarToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <F11> :NERDTree<CR>
 
+let g:jedi#use_tabs_not_buffers = 1
+
 au FileType go nmap <Leader>gr <Plug>(go-run)
 au FileType go nmap <Leader>b <Plug>(go-build)
 au FileType go nmap <Leader>t <Plug>(go-test)
