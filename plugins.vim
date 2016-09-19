@@ -75,3 +75,11 @@ nmap <F9> :TagbarToggle<CR>
 "NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <F11> :NERDTree<CR>
+
+au FileType go nmap <Leader>gr <Plug>(go-run)
+au FileType go nmap <Leader>b <Plug>(go-build)
+au FileType go nmap <Leader>t <Plug>(go-test)
+au FileType go nmap <Leader>c <Plug>(go-coverage)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
