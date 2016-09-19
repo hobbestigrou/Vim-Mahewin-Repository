@@ -44,6 +44,7 @@ Plugin 'vim-scripts/django.vim'
 Plugin 'rking/ag.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'groenewege/vim-less'
+Plugin 'fatih/vim-go'
 
 if filereadable(glob("~/.bundle.local"))
     exe 'source ' . '~/.bundle.local'
