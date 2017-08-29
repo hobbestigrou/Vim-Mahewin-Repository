@@ -35,3 +35,19 @@ To push code in the normal mode:
     <leader>gp
 
 Use the current branch.
+
+Vim window
+----------
+To inverse the split of a window. To change vertically to horizontally:
+
+.. code-block:: vim
+
+    <c-w>-
+
+Horizontally to vertically:
+
+    <c-w>|
+
+No toggle support.
+
+

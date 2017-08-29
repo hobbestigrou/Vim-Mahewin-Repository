@@ -17,3 +17,6 @@ map pt :!prove -l %<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 nmap <Leader>gp :Git push origin `git rev-parse --abbrev-ref HEAD`<CR>
 nmap <Leader>gpu :Git pull origin `git rev-parse --abbrev-ref HEAD`<CR>
+
+noremap <c-w>- <c-w>t<c-w>K
+noremap <c-w>\| <c-w>t<c-w>H
